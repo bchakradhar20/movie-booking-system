@@ -1,0 +1,159 @@
+.booking-form-page {
+  margin-top: 50px;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-top: 50px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Seat Map Grid */
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(10, 40px); /* 10 columns, each 40px wide */
+  gap: 8px; /* Space between seats */
+  justify-content: center;
+  margin: 20px auto;
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Seat Button */
+.seat {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Available Seat */
+.seat:not(.booked):hover {
+  transform: scale(1.1);
+  background-color: #b3e5fc;
+}
+
+/* Selected Seat */
+.seat.selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Booked Seat */
+.seat.booked {
+  background-color: #d32f2f;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Seat Icons */
+.seat::before {
+  content: "💺";
+}
+
+/* Booked Seat Icon */
+.seat.booked::before {
+  content: "❌";
+}
+
+/* Selected Seat Icon */
+.seat.selected::before {
+  content: "✅";
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+/* Confirm Button */
+button[type="submit"] {
+  background-color: #388e3c;
+}
+
+button[type="submit"]:hover {
+  background-color: #2e7d32;
+}
+.booking-form-page {
+  text-align: center;
+}
+
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  margin: 20px auto;
+  max-width: 320px;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  background-color: #d2e8d4;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.booked {
+  background-color: red;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+.payment-section {
+  text-align: center;
+  margin-top: 20px;
+}
